@@ -1,0 +1,70 @@
+\documentclass{article}
+\usepackage{tikz}
+\usepackage[T1]{fontenc}
+%\usepackage{inconsolata}
+\usepackage{tgbonum}
+
+\begin{document}
+
+    \begin{tikzpicture}
+
+        \coordinate (mittelpunkt) at (-2cm,-2cm);
+
+        \node [] (einheit) at ([yshift=2cm]mittelpunkt) {\large Mbps};
+        \node [] (uhreinheit) at ([yshift=1.70cm]mittelpunkt) {\tiny Stunden};
+        \node [text width=2.8cm, align=left] (richtung) at ([yshift=1.0cm, xshift=-1.5cm]mittelpunkt) {\footnotesize Eingehende Daten};
+        \node [text width=2.8cm, align=right] (serial) at ([yshift=1.0cm, xshift=+1.5cm]mittelpunkt) {\footnotesize 000 1};
+
+        \draw[thick] ([shift=(45:3cm)]mittelpunkt) arc (45:135:3cm);
+
+        % Hauptstrahlen
+        \foreach \winkel/\winkeltext/\winkeluhr in {45/120/, 54//24, 63/100/, 72//18, 81/80/, 90//12, 99/60/, 108//6, 117/40/, 126//0, 135/0/}
+        {
+            \draw (mittelpunkt)++(\winkel:3cm) -- ++(\winkel:.5cm) node[rotate=-90+\winkel, anchor=south] (A)  {\footnotesize \winkeltext};
+            \draw (mittelpunkt)++(\winkel:3cm) -- ++(\winkel:-.1cm) node[rotate=-90+\winkel, anchor=north] (A)  {\tiny \winkeluhr};
+        }
+        % Hauptstrahlen dick, kurz
+        \foreach \winkel in {45, 54,...,135}
+            \draw [ultra thick] (mittelpunkt)++(\winkel:3cm) -- ++(\winkel:.14cm);
+        % Mittelstriche
+        \foreach \winkel in {49.5, 58.5,..., 130.5}
+            \draw (mittelpunkt)++(\winkel:3cm) -- ++(\winkel:.14cm);
+        % kleine Striche
+        %\foreach \winkel in {47.25, 51.75,..., 132.75}
+        %    \draw (mittelpunkt)++(\winkel:3cm) -- ++(\winkel:.1178cm);
+
+    
+\end{tikzpicture}
+
+ \begin{tikzpicture}
+
+        \coordinate (mittelpunkt) at (-2cm,-2cm);
+
+        \node [] (einheit) at ([yshift=2cm]mittelpunkt) {\large Mbps};
+        \node [] (uhreinheit) at ([yshift=1.70cm]mittelpunkt) {\tiny Minuten};
+        \node [text width=2.8cm, align=left] (richtung) at ([yshift=1.0cm, xshift=-1.5cm]mittelpunkt) {\footnotesize Ausgehende Daten};
+        \node [text width=2.8cm, align=right] (serial) at ([yshift=1.0cm, xshift=+1.5cm]mittelpunkt) {\footnotesize 000 1};
+
+        \draw[thick] ([shift=(45:3cm)]mittelpunkt) arc (45:135:3cm);
+
+        % Hauptstrahlen
+        \foreach \winkel/\winkeltext/\winkeluhr in {45/12/, 54//60, 63/10/, 72//45, 81/8/, 90//30, 99/6/, 108//15, 117/4/, 126//0, 135/0/}
+        {
+            \draw (mittelpunkt)++(\winkel:3cm) -- ++(\winkel:.5cm) node[rotate=-90+\winkel, anchor=south] (A)  {\footnotesize \winkeltext};
+            \draw (mittelpunkt)++(\winkel:3cm) -- ++(\winkel:-.1cm) node[rotate=-90+\winkel, anchor=north] (A)  {\tiny \winkeluhr};
+        }
+        % Hauptstrahlen dick, kurz
+        \foreach \winkel in {45, 54,...,135}
+            \draw [ultra thick] (mittelpunkt)++(\winkel:3cm) -- ++(\winkel:.14cm);
+        % Mittelstriche
+        \foreach \winkel in {49.5, 58.5,..., 130.5}
+            \draw (mittelpunkt)++(\winkel:3cm) -- ++(\winkel:.14cm);
+        % kleine Striche
+        %\foreach \winkel in {47.25, 51.75,..., 132.75}
+        %    \draw (mittelpunkt)++(\winkel:3cm) -- ++(\winkel:.1178cm);
+
+    
+\end{tikzpicture}
+
+
+\end{document}
