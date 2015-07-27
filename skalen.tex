@@ -21,6 +21,9 @@
         \foreach \winkel/\winkeltext/\winkeluhr in {45/120/, 54//24, 63/100/, 72//18, 81/80/, 90//12, 99/60/, 108//6, 117/40/, 126//0, 135/0/}
         {
             \draw (mittelpunkt)++(\winkel:3cm) -- ++(\winkel:.5cm) node[rotate=-90+\winkel, anchor=south] (A)  {\footnotesize \winkeltext};
+        }
+        \foreach \winkel/\winkeltext/\winkeluhr in {54//24, 63/100/, 72//18, 81/80/, 90//12, 99/60/, 108//6, 117/40/, 126//0}
+        {
             \draw (mittelpunkt)++(\winkel:3cm) -- ++(\winkel:-.1cm) node[rotate=-90+\winkel, anchor=north] (A)  {\tiny \winkeluhr};
         }
         % Hauptstrahlen dick, kurz
@@ -51,6 +54,9 @@
         \foreach \winkel/\winkeltext/\winkeluhr in {45/12/, 54//60, 63/10/, 72//45, 81/8/, 90//30, 99/6/, 108//15, 117/4/, 126//0, 135/0/}
         {
             \draw (mittelpunkt)++(\winkel:3cm) -- ++(\winkel:.5cm) node[rotate=-90+\winkel, anchor=south] (A)  {\footnotesize \winkeltext};
+        }
+        \foreach \winkel/\winkeltext/\winkeluhr in {54//60, 63/100/, 72//45, 81/80/, 90//30, 99/60/, 108//15, 117/40/, 126//0}
+        {
             \draw (mittelpunkt)++(\winkel:3cm) -- ++(\winkel:-.1cm) node[rotate=-90+\winkel, anchor=north] (A)  {\tiny \winkeluhr};
         }
         % Hauptstrahlen dick, kurz
