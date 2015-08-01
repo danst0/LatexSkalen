@@ -8,7 +8,7 @@
 \begin{document}
 
     \begin{tikzpicture}
-        \def\radius{2.9cm}
+        \def\radius{2.8cm}
         \coordinate (mittelpunkt) at (-2cm,-2cm);
         \draw[] ([xshift=-3.25cm,yshift=-0.05cm]mittelpunkt) rectangle ++(6.5cm, 4.07cm);
 
@@ -16,7 +16,7 @@
         \node [] (uhreinheit) at ([yshift=1.60cm]mittelpunkt) {\tiny Stunde};
 
         \node [text width=2.8cm, align=left] (richtung) at ([yshift=1.2cm, xshift=-1.2cm]mittelpunkt) {\footnotesize Eingehende Daten};
-        \node [text width=2.8cm, align=right] (serial) at ([yshift=1.2cm, xshift=+1.2cm]mittelpunkt) {\footnotesize 000 1};
+        \node [text width=2.8cm, align=right] (serial) at ([yshift=1.2cm, xshift=+1.2cm]mittelpunkt) {\footnotesize 000 2};
 
         \draw[thick] ([shift=(45:\radius)]mittelpunkt) arc (45:135:\radius);
         
@@ -38,23 +38,23 @@
             \draw [ultra thick] (mittelpunkt)++(\winkel:\radius) -- ++(\winkel:.14cm);
         % Mittelstriche
         \foreach \winkel in {49.5, 58.5,..., 130.5}
-            \draw (mittelpunkt)++(\winkel:\radius) -- ++(\winkel:.31cm);
+            \draw (mittelpunkt)++(\winkel:\radius) -- ++(\winkel:.14cm);
         % kleine Striche
-        \foreach \winkel in {47.25, 51.75,..., 132.75}
-            \draw (mittelpunkt)++(\winkel:\radius) -- ++(\winkel:.1178cm);
+        %\foreach \winkel in {47.25, 51.75,..., 132.75}
+        %    \draw (mittelpunkt)++(\winkel:\radius) -- ++(\winkel:.1178cm);
 
     
 \end{tikzpicture}
 \vspace{1cm}
 
  \begin{tikzpicture}
-        \def\radius{2.9cm}
+        \def\radius{2.8cm}
         \coordinate (mittelpunkt) at (-2cm,-2cm);
         \draw[] ([xshift=-3.25cm,yshift=-0.05cm]mittelpunkt) rectangle ++(6.5cm, 4.07cm);
         \node [] (einheit) at ([yshift=2cm]mittelpunkt) {\LARGE Mbps};
         \node [] (uhreinheit) at ([yshift=1.60cm]mittelpunkt) {\tiny Minute};
         \node [text width=2.8cm, align=left] (richtung) at ([yshift=1.2cm, xshift=-1.2cm]mittelpunkt) {\footnotesize Ausgehende Daten};
-        \node [text width=2.8cm, align=right] (serial) at ([yshift=1.2cm, xshift=+1.2cm]mittelpunkt) {\footnotesize 000 1};
+        \node [text width=2.8cm, align=right] (serial) at ([yshift=1.2cm, xshift=+1.2cm]mittelpunkt) {\footnotesize 000 2};
 
         \draw[thick] ([shift=(45:\radius)]mittelpunkt) arc (45:135:\radius);
 
@@ -77,10 +77,10 @@
             \draw [ultra thick] (mittelpunkt)++(\winkel:\radius) -- ++(\winkel:.14cm);
         % Mittelstriche
         \foreach \winkel in {49.5, 58.5,..., 130.5}
-            \draw (mittelpunkt)++(\winkel:\radius) -- ++(\winkel:.31cm);
+            \draw (mittelpunkt)++(\winkel:\radius) -- ++(\winkel:.14cm);
         % kleine Striche
-        \foreach \winkel in {47.25, 51.75,..., 132.75}
-            \draw (mittelpunkt)++(\winkel:\radius) -- ++(\winkel:.1178cm);
+        %\foreach \winkel in {47.25, 51.75,..., 132.75}
+        %    \draw (mittelpunkt)++(\winkel:\radius) -- ++(\winkel:.1178cm);
 
     
 \end{tikzpicture}
